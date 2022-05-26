@@ -1,13 +1,7 @@
-import os
-import json
 import base64
-import requests
 from detect_object import *
-from PIL import Image
-from io import BytesIO
-from flask import Flask, jsonify, redirect, url_for, request, render_template
+from flask import Flask, request
 from werkzeug.utils import secure_filename
-from gevent.pywsgi import WSGIServer
 
 # Define a flask app
 app = Flask(__name__)
@@ -33,7 +27,9 @@ def upload_file():
         
 
 if __name__ == '__main__':
-    app.run(debug=True,port=4000)
+    app.run(debug=True, port=8080)
 
 
-     
+
+
+
